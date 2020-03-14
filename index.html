@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./compatibleStorage.js"></script>
+    <script>
+        // 使用
+        dataStorageObj.setItem('aa', '11'); // 赋值
+        console.log(dataStorageObj.getItem('aa')); // 取值
+        setTimeout(function(){
+            dataStorageObj.setItem('aa', '22'); // 替换值
+        }, 5000);
+
+        setTimeout(function(){
+            dataStorageObj.removeItem('aa'); // 移除
+        }, 10000);
+    </script>
+</body>
+</html>
